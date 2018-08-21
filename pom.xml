@@ -22,27 +22,27 @@ under the License.
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.stsffap</groupId>
-	<artifactId>cep-monitoring</artifactId>
+	<parent>
+		<groupId>org.apache.flink</groupId>
+		<artifactId>flink-examples</artifactId>
+		<version>1.7-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
+
+	<artifactId>cep-monitoring_${scala.binary.version}</artifactId>
 	<name>cep-monitoring</name>
-	<version>1.0</version>
-
 	<packaging>jar</packaging>
-
-	<properties>
-		<flink.version>1.4.1</flink.version>
-	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-streaming-java_2.11</artifactId>
-			<version>${flink.version}</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-cep_2.11</artifactId>
-			<version>${flink.version}</version>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 
